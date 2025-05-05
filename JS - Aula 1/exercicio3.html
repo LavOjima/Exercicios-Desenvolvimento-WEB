@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <script>
+        window.onload = inicio;
+
+        function inicio() {
+            let botao = document.getElementById('botaoSom');
+            botao.addEventListener('click', soma);
+            let botao2 = document.getElementById('botaoSub');
+            botao2.addEventListener('click', subtração);
+            let botao3 = document.getElementById('botaoMultp');
+            botao3.addEventListener('click', multiplicação);
+            let botao4 = document.getElementById('botaoDivi');
+            botao4.addEventListener('click', divisão);
+            let botao5 = document.getElementById('botaoExpoe');
+            botao5.addEventListener('click', exponenciação);
+            let botao6 = document.getElementById('botaoResto');
+            botao6.addEventListener('click', resto);
+            let botao7 = document.getElementById('botaoIncrem');
+            botao7.addEventListener('click', incremento);
+            let botao8 = document.getElementById('botaoDecrem');
+            botao8.addEventListener('click', decremento);
+        }
+
+    function soma() {
+        let saida = document.getElementById('saida');
+        let x = 7;
+        let y = 3;
+        saida.innerHTML = x + y;
+    }
+
+    function subtração() {
+        let saida = document.getElementById('saida');
+        let x = 7;
+        let y = 3;
+        saida.innerHTML = x - y;
+    }
+
+
+    function multiplicação() {
+        let saida = document.getElementById('saida');
+        let x = 7;
+        let y = 3;
+        saida.innerHTML = x * y;
+    }
+
+
+    function divisão() {
+        let saida = document.getElementById('saida');
+        let x = 10;
+        let y = 2;
+        saida.innerHTML = x / y;
+    }
+
+
+    function exponenciação() {
+        let saida = document.getElementById('saida');
+        let x = 10;
+        let y = 2;
+        saida.innerHTML = x ** y;
+    }
+
+
+    function resto() {
+        let saida = document.getElementById('saida');
+        let x = 20;
+        let y = 8;
+        saida.innerHTML = x % y;
+    }
+
+    function incremento() {
+        let saida = document.getElementById('saida');
+        let x = 999;
+        x++;
+        saida.innerHTML = x;
+    }
+
+    function decremento() {
+        let saida = document.getElementById('saida');
+        let x = 1000;
+        x--;
+        saida.innerHTML = x;
+    }
+
+
+
+    </script>
+</head>
+<body>
+    <p id="saida">JS esperando evento</p>
+    <input type="button" value="+" id="botaoSom">
+    <input type="button" value="-" id="botaoSub">
+    <input type="button" value="*" id="botaoMultp">
+    <input type="button" value="÷" id="botaoDivi">
+    <input type="button" value="^" id="botaoExpoe">
+    <input type="button" value="%" id="botaoResto">
+    <input type="button" value="++" id="botaoIncrem">
+    <input type="button" value="--" id="botaoDecrem">
+</body>
+</html>
