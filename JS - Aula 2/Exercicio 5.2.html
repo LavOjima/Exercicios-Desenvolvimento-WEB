@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parágrafos</title>
+    <script>
+	window.onload = inicio;
+		
+        function inicio() {
+            var paras = document.getElementsByTagName('p');
+            for (let i = 0; i < paras.length; i++) {
+                paras[i].addEventListener('mouseover', aumenta);
+                paras[i].addEventListener('mouseout', normaliza);
+                paras[i].fonteOriginal = window.getComputedStyle(paras[i]).fontSize;}
+        }
+
+        function aumenta() {
+            console.log('aumenta');
+            console.log(this.innerHTML);
+            let fonte = parseInt(window.getComputedStyle(this).fontSize);
+            fonte = fonte + 3;
+            this.style.fontSize = fonte + "px";
+        }
+
+        function normaliza() {
+            console.log('normaliza');
+            console.log(this);
+            this.style.fontSize = this.fonteOriginal; 
+        }
+    </script>
+</head>
+<body>
+    <p>A história da biologia traça o estudo do meio vivo desde a Antiguidade até aos tempos modernos.</p>
+    <p>Embora o conceito de biologia enquanto campo científico único e coeso só tenha surgido no século XIX, as ciências biológicas têm origem nas práticas ancestrais de medicina e de história natural que remontam à Ayurveda, à medicina do Antigo Egito e às obras de Aristóteles e Galeno durante a Antiguidade clássica.</p> 
+    <p>Esta tradição pioneira continuou a ser aperfeiçoada durante a Idade Média por médicos e acadêmicos como Avicena.</p> 
+    <p>Durante o Renascimento e no início da Idade Moderna, o raciocínio científico na Europa foi drasticamente alterado com a introdução do empirismo e com a descoberta de inúmeras formas de vida.</p> 
+    <p>Entre as figuras de relevo deste movimento destacam-se Andreas Vesalius e William Harvey, introdutores do experimentalismo e da observação científica na fisiologia, e naturalistas como Carolus Linnaeus e Buffon, pioneiros da classificação das espécies e dos registos fósseis, para além de obras no comportamento e desenvolvimento dos seres vivos.</p>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script>
+	window.onload = inicio;
+
+	function inicio() {
+	    var visor = document.getElementById('visor');
+	    visor.textContent = "0";
+
+	    var btnSete = document.getElementById('botaoSete');
+	    btnSete.addEventListener('click', fsete);
+	}
+
+	function fsete() {
+	    var visor = document.getElementById('visor');
+		
+		if(visor.textContent == "0"){
+			visor.textContent = "7";
+		} else{
+			visor.textContent = visor.textContent + "7";
+		}
+	}
+    </script>
+</head>
+<body>
+    <p id="visor"></p>
+    <div id="botoes">
+	<input type="button" value="7" id="botaoSete">
+    </div>
+</body>
+</html>  

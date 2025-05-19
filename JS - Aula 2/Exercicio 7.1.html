@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+	<style>
+		#botoes input{
+			width: 25px;
+			height: 25px;
+			text-align: center;
+		}
+
+	</style>
+    <script>
+
+	let op1;
+
+	let operacao;
+
+	window.onload = inicio;
+
+	function inicio() {
+	    var visor = document.getElementById('visor');
+	    visor.textContent = "0";
+
+		document.getElementById('botaoUm').addEventListener('click', fUm);
+		document.getElementById('botaoDois').addEventListener('click', fDois);
+		document.getElementById('botaoTres').addEventListener('click', fTres);
+		document.getElementById('botaoQuatro').addEventListener('click', fQuatro);
+		document.getElementById('botaoCinco').addEventListener('click', fCinco);
+		document.getElementById('botaoSeis').addEventListener('click', fSeis);
+		document.getElementById('botaoSete').addEventListener('click', fSete);
+		document.getElementById('botaoOito').addEventListener('click', fOito);
+		document.getElementById('botaoNove').addEventListener('click', fNove);
+		document.getElementById('botaoZero').addEventListener('click', fZero);
+		document.getElementById('botaoSoma').addEventListener('click', fSoma);
+		document.getElementById('botaoSub').addEventListener('click', fSub);
+		document.getElementById('botaoC').addEventListener('click', fC);
+		document.getElementById('botaoMult').addEventListener('click', fMult);
+		document.getElementById('botaoIg').addEventListener('click', fIg);
+		document.getElementById('botaoDiv').addEventListener('click', fDiv);
+		document.getElementById('botaoPonto').addEventListener('click', fPonto);
+
+
+	}
+
+	function fUm() {
+	    var visor = document.getElementById('visor');
+		
+		if(visor.textContent == "0"){
+			visor.textContent = "1";
+		} else{
+			visor.textContent = visor.textContent + "1";
+		}
+	}
+
+	function fDois() {
+	    var visor = document.getElementById('visor');
+		
+		if(visor.textContent == "0"){
+			visor.textContent = "2";
+		} else{
+			visor.textContent = visor.textContent + "2";
+		}
+	}
+
+	function fTres() {
+	    var visor = document.getElementById('visor');
+		
+		if(visor.textContent == "0"){
+			visor.textContent = "3";
+		} else{
+			visor.textContent = visor.textContent + "3";
+		}
+	}
+
+	function fQuatro() {
+	    var visor = document.getElementById('visor');
+		
+		if(visor.textContent == "0"){
+			visor.textContent = "4";
+		} else{
+			visor.textContent = visor.textContent + "4";
+		}
+	}
+
+	function fCinco() {
+	    var visor = document.getElementById('visor');
+		
+		if(visor.textContent == "0"){
+			visor.textContent = "5";
+		} else{
+			visor.textContent = visor.textContent + "5";
+		}
+	}
+
+	function fSeis() {
+	    var visor = document.getElementById('visor');
+		
+		if(visor.textContent == "0"){
+			visor.textContent = "6";
+		} else{
+			visor.textContent = visor.textContent + "6";
+		}
+	}
+
+	function fSete() {
+	    var visor = document.getElementById('visor');
+		
+		if(visor.textContent == "0"){
+			visor.textContent = "7";
+		} else{
+			visor.textContent = visor.textContent + "7";
+		}
+	}
+
+	function fOito() {
+	    var visor = document.getElementById('visor');
+		
+		if(visor.textContent == "0"){
+			visor.textContent = "8";
+		} else{
+			visor.textContent = visor.textContent + "8";
+		}
+	}
+
+	function fNove() {
+	    var visor = document.getElementById('visor');
+		
+		if(visor.textContent == "0"){
+			visor.textContent = "9";
+		} else{
+			visor.textContent = visor.textContent + "9";
+		}
+	} 
+
+	function fZero() {
+	    var visor = document.getElementById('visor');
+		
+		if(visor.textContent == "0"){
+			visor.textContent;
+		} else{
+			visor.textContent = visor.textContent + "0";
+		}
+	} 
+
+	function fPonto() {
+	    var visor = document.getElementById('visor');
+		visor.textContent = visor.textContent + ".";
+	} 
+
+	function fSoma() {
+	    let conteudo = visor.textContent;
+		op1 = visor.textContent;
+		operacao = "+";
+		
+		console.log(op1);
+		console.log(operacao);
+
+		
+		visor.textContent = 0;
+	} 
+
+	function fSub() {
+	    let conteudo = visor.textContent;
+		op1 = visor.textContent;
+		operacao = "+";
+		
+		console.log(op1);
+		console.log(operacao);
+
+		
+		visor.textContent = 0;
+	} 
+
+	function fMult() {
+	    let conteudo = visor.textContent;
+		op1 = visor.textContent;
+		operacao = "+";
+		
+		console.log(op1);
+		console.log(operacao);
+
+		
+		visor.textContent = 0;
+	}
+
+	function fDiv() {
+	    let conteudo = visor.textContent;
+		op1 = visor.textContent;
+		operacao = "/";
+		
+		console.log(op1);
+		console.log(operacao);
+
+		
+		visor.textContent = 0;
+	}
+
+	function fC() {
+	    var visor = document.getElementById('visor');
+
+			visor.textContent = 0;
+	}
+
+	function fIg() {
+		let conteudo = parseInt(visor.innerHTML, 10);
+		let resultado = 0;
+		let op2 = conteudo;
+
+		if(operacao == "+") {
+			resultado = parseInt(op1) + op2;
+		}
+
+		if(operacao == "-") {
+			resultado = parseInt(op1) - op2;
+		}
+
+		if(operacao == "*") {
+			resultado = parseInt(op1) * op2;
+		}
+
+		if(operacao == "/") {
+			resultado = parseInt(op1) / op2;
+		}
+
+
+		visor.innerHTML = resultado;
+	}
+
+
+    </script>
+</head>
+<body>
+    <p id="visor"></p>
+    <div id="botoes">
+
+	<input type="button" value="1" id="botaoUm">
+	<input type="button" value="2" id="botaoDois">
+	<input type="button" value="3" id="botaoTres"> 
+	<input type="button" value="+" id="botaoSoma"> <br>
+	<input type="button" value="4" id="botaoQuatro">
+	<input type="button" value="5" id="botaoCinco">
+	<input type="button" value="6" id="botaoSeis"> 
+	<input type="button" value="-" id="botaoSub"> <br>
+	<input type="button" value="7" id="botaoSete">
+	<input type="button" value="8" id="botaoOito">
+	<input type="button" value="9" id="botaoNove"> 
+	<input type="button" value="*" id="botaoMult"> <br>
+	<input type="button" value="C" id="botaoC">
+	<input type="button" value="0" id="botaoZero">
+	<input type="button" value="=" id="botaoIg">
+	<input type="button" value="/" id="botaoDiv">
+	<input type="button" value="." id="botaoPonto">
+    
+</div>
+</body>
+</html>  

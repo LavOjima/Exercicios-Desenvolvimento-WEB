@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+	<style>
+		#botoes input{
+			width: 41px;
+			height: 41px;
+			text-align: center;
+		}
+
+	</style>
+    <script>
+
+	let op1;
+
+	let operacao;
+
+	window.onload = inicio;
+
+	function inicio() {
+	    var campo = document.getElementById('entrada');
+
+		document.getElementById('botaoUm').addEventListener('click', fUm);
+		document.getElementById('botaoDois').addEventListener('click', fDois);
+		document.getElementById('botaoTres').addEventListener('click', fTres);
+		document.getElementById('botaoQuatro').addEventListener('click', fQuatro);
+		document.getElementById('botaoCinco').addEventListener('click', fCinco);
+		document.getElementById('botaoSeis').addEventListener('click', fSeis);
+		document.getElementById('botaoSete').addEventListener('click', fSete);
+		document.getElementById('botaoOito').addEventListener('click', fOito);
+		document.getElementById('botaoNove').addEventListener('click', fNove);
+		document.getElementById('botaoZero').addEventListener('click', fZero);
+		document.getElementById('botaoSoma').addEventListener('click', fSoma);
+		document.getElementById('botaoSub').addEventListener('click', fSub);
+		document.getElementById('botaoC').addEventListener('click', fC);
+		document.getElementById('botaoMult').addEventListener('click', fMult);
+		document.getElementById('botaoDiv').addEventListener('click', fDiv);
+		document.getElementById('botaoIg').addEventListener('click', fIg);
+		document.getElementById('botaoPonto').addEventListener('click', fPonto);
+
+
+	}
+	
+	function fUm() {
+	    var campo = document.getElementById('entrada');
+		
+		if(campo.value == "0"){
+			campo.value = "1";
+		} else{
+			campo.value = campo.value + "1";
+		}
+    	return campo.value;
+
+	}
+
+	function fDois() {
+	    var campo = document.getElementById('entrada');
+		
+		if(campo.value == "0"){
+			campo.value = "2";
+		} else{
+			campo.value = campo.value + "2";
+		}
+	}
+
+	function fTres() {
+	    var campo = document.getElementById('entrada');
+		
+		if(campo.value == "0"){
+			campo.value = "3";
+		} else{
+			campo.value = campo.value + "3";
+		}
+	}
+
+	function fQuatro() {
+	    var campo = document.getElementById('entrada');
+		
+		if(campo.value == "0"){
+			campo.value = "4";
+		} else{
+			campo.value = campo.value + "4";
+		}
+	}
+
+	function fCinco() {
+	    var campo = document.getElementById('entrada');
+		
+		if(campo.value == "0"){
+			campo.value = "5";
+		} else{
+			campo.value = campo.value + "5";
+		}
+	}
+
+	function fSeis() {
+	    var campo = document.getElementById('entrada');
+		
+		if(campo.value == "0"){
+			campo.value = "6";
+		} else{
+			campo.value = campo.value + "6";
+		}
+	}
+
+	function fSete() {
+	    var campo = document.getElementById('entrada');
+		
+		if(campo.value == "0"){
+			campo.value = "7";
+		} else{
+			campo.value = campo.value + "7";
+		}
+	}
+
+	function fOito() {
+	    var campo = document.getElementById('entrada');
+		
+		if(campo.value == "0"){
+			campo.value = "8";
+		} else{
+			campo.value = campo.value + "8";
+		}
+	}
+
+	function fNove() {
+	    var campo = document.getElementById('entrada');
+		
+		if(campo.value == "0"){
+			campo.value = "9";
+		} else{
+			campo.value = campo.value + "9";
+		}
+	} 
+
+	function fZero() {
+	    var campo = document.getElementById('entrada');
+		
+		if(campo.value == "0"){
+			campo.value;
+		} else{
+			campo.value = campo.value + "0";
+		}
+	} 
+
+	function fPonto() {
+	    var campo = document.getElementById('entrada');
+		campo.value = campo.value + ".";
+	} 
+
+	function fSoma() {
+		var campo = document.getElementById('entrada');
+
+	    let conteudo = campo.value;
+		op1 = campo.value;
+		operacao = "+";
+		
+		console.log(op1);
+		console.log(operacao);
+
+		
+		campo.value = 0;
+	} 
+
+	function fSub() {
+		var campo = document.getElementById('entrada');
+
+	    let conteudo = campo.value;
+		op1 = campo.value;
+		operacao = "-";
+		
+		console.log(op1);
+		console.log(operacao);
+
+		
+		campo.value = 0;
+
+	} 
+
+	function fMult() {
+		var campo = document.getElementById('entrada');
+
+	    let conteudo = campo.value;
+		op1 = campo.value;
+		operacao = "*";
+		
+		console.log(op1);
+		console.log(operacao);
+
+		
+		campo.value = 0;
+	}
+
+	function fDiv() {
+		var campo = document.getElementById('entrada');
+
+	    let conteudo = campo.value;
+		op1 = campo.value;
+		operacao = "/";
+		
+		console.log(op1);
+		console.log(operacao);
+
+		
+		campo.value = 0;		
+	}
+
+	function fC() {
+	    var campo = document.getElementById('entrada');
+
+			campo.value = 0;
+	}
+
+	function fIg() {
+		var campo = document.getElementById('entrada');
+
+		let conteudo = parseInt(campo.value, 10);
+		let resultado = 0;
+		let op2 = conteudo;
+
+		if(operacao == "+") {
+			resultado = parseInt(op1) + op2;
+		}
+
+		if(operacao == "-") {
+			resultado = parseInt(op1) - op2;
+		}
+
+		if(operacao == "*") {
+			resultado = parseInt(op1) * op2;
+		}
+
+		if(operacao == "/") {
+			resultado = parseInt(op1) / op2;
+		}
+		campo.value = resultado;
+	}
+
+
+    </script>
+</head>
+<body>
+	<input type="text" id="entrada">
+
+    <div id="botoes">
+
+	<input type="button" value="1" id="botaoUm">
+	<input type="button" value="2" id="botaoDois">
+	<input type="button" value="3" id="botaoTres"> 
+	<input type="button" value="+" id="botaoSoma"> <br>
+	<input type="button" value="4" id="botaoQuatro">
+	<input type="button" value="5" id="botaoCinco">
+	<input type="button" value="6" id="botaoSeis"> 
+	<input type="button" value="-" id="botaoSub"> <br>
+	<input type="button" value="7" id="botaoSete">
+	<input type="button" value="8" id="botaoOito">
+	<input type="button" value="9" id="botaoNove"> 
+	<input type="button" value="*" id="botaoMult"> <br>
+	<input type="button" value="." id="botaoPonto">
+	<input type="button" value="0" id="botaoZero">
+	<input type="button" value="=" id="botaoIg">
+	<input type="button" value="/" id="botaoDiv"> <br>
+	<input type="button" value="C" id="botaoC">
+    
+</div>
+</body>
+</html>  
