@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Nota</title>
+    <script>
+        window.onload = iniciar;
+
+        function iniciar() {
+            let botaoVerificarNota = document.getElementById('botaoVerificarNota');
+            botaoVerificarNota.addEventListener('click', exibirResultado);
+        }
+
+        function exibirResultado() {
+            let campoNomeAluno = document.getElementById('campoNomeAluno');
+            let campoNotaAluno = document.getElementById('campoNotaAluno');
+            let campoResultadoAluno = document.getElementById('campoResultadoAluno');
+
+            let nomeAluno = campoNomeAluno.value.trim();
+            let notaAluno = Number(campoNotaAluno.value.trim());
+
+            if (nomeAluno === "" || campoNotaAluno.value.trim() === "" || notaAluno < 0 || notaAluno > 10) {
+                campoResultadoAluno.value = "Insira um nome e uma nota válida (entre 0 e 10).";
+                return;
+            }
+
+            campoResultadoAluno.value = notaAluno >= 6 ? `${nomeAluno}, Aprovado!` : `${nomeAluno}, Reprovado.`;
+        }
+    </script>
+</head>
+<body>
+    Nome: <input type="text" id="campoNomeAluno"><br>
+    Nota: <input type="text" id="campoNotaAluno"><br>
+    <input type="button" id="botaoVerificarNota" value="Verificar">
+    <input type="text" id="campoResultadoAluno" readonly><br>
+</body>
+</html>

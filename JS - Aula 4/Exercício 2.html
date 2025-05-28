@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Salário Semanal</title>
+    <script>
+        function calcularSalario() {
+            let nomeVendedor = document.getElementById('nomeVendedor').value.trim();
+            let salarioBase = Number(document.getElementById('salarioBase').value.trim());
+            let vendasDiarias = Number(document.getElementById('vendasDiarias').value.trim());
+            let resultado = document.getElementById('resultado');
+
+            if (nomeVendedor === "" || isNaN(salarioBase) || isNaN(vendasDiarias)) {
+                resultado.innerHTML = "Por favor, insira valores válidos.";
+                return;
+            }
+
+            let salarioAtual = salarioBase;
+            let comissao = 0.05;
+            let mensagem = `<strong>${nomeVendedor}</strong><br>`;
+
+            for (let dia = 1; dia <= 5; dia++) {
+                salarioAtual += vendasDiarias * comissao;
+                mensagem += `Total ${dia} dias: ${salarioAtual.toFixed(2)}<br>`;
+            }
+
+            resultado.innerHTML = mensagem;
+        }
+    </script>
+</head>
+<body>
+    Nome: <input type="text" id="nomeVendedor"><br>
+    Salário: <input type="text" id="salarioBase"><br>
+    Vendas do dia: <input type="text" id="vendasDiarias"><br>
+    <input type="button" value="Calcular" onclick="calcularSalario()">
+    <p id="resultado"></p>
+</body>
+</html>
