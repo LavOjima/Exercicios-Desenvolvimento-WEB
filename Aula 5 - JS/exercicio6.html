@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+	.estilo {
+	    font-size: 36px;
+	    border: 1px solid black;
+	    text-shadow: 2px 2px 5px black;
+	}
+
+    .dark {
+	    font-size: 36px;
+	    border: 1px solid white;
+	    text-shadow: 2px 2px 5px white;
+        background-color: black;
+        color: white;
+	}
+    </style>
+    <script>
+	window.onload = inicio;
+
+	function inicio() {
+	    let botao = document.getElementById('btnEstilo');
+	    botao.addEventListener('click', aplicaEstilo);
+        let botao2 = document.getElementById('btnDark');
+	    botao2.addEventListener('click', aplicaDark);
+	}
+	function aplicaEstilo() {
+	    // busca todos os elementos <h1>:
+	    let titulos = document.getElementsByTagName('h1');
+
+	    // usa o primeiro deles [0]
+	    let primeiro = titulos[0];
+
+	    primeiro.className = 'estilo';
+    }
+
+    function aplicaDark(){
+        let titulos = document.getElementsByTagName('h1');
+
+	    // usa o primeiro deles [0]
+	    let primeiro = titulos[0];
+
+	    primeiro.className = 'dark';
+    }
+    </script>
+</head>
+<body>
+    <h1>Hello, world!</h1>
+    <input type="button" value="Estilo" id="btnEstilo">
+    <input type="button" value="Dark" id="btnDark">
+</body>
+</html>

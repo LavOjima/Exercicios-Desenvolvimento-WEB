@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <script>
+	window.onload = inicio;
+
+	let imgLigada = 'https://i.ibb.co/d4mZ5k0Y/Captura-de-Tela-2025-06-02-s-16-08-21.png';
+	let imgDesligada = 'https://i.ibb.co/hRHPxcnP/Captura-de-Tela-2025-06-02-s-16-08-01.png';
+
+	function inicio() {
+	    let imagem = document.getElementById('imagem');
+	    imagem.src = imgDesligada;
+
+        let botaoLig = document.getElementById('btnLigar');
+	    botaoLig.addEventListener('click', liga);
+
+        let botaoDes = document.getElementById('btnDesligar');
+	    botaoDes.addEventListener('click', desliga);
+	}
+	function liga() {
+	    let Ligar = document.getElementById('imagem');
+	    Ligar.src = 'https://i.ibb.co/d4mZ5k0Y/Captura-de-Tela-2025-06-02-s-16-08-21.png';
+	}
+	function desliga() {
+	    let Desligar = document.getElementById('imagem');
+	    Desligar.src = 'https://i.ibb.co/hRHPxcnP/Captura-de-Tela-2025-06-02-s-16-08-01.png';
+	}
+    </script>
+</head>
+<body>
+    <img src="" alt="" id="imagem"><br>
+    <input type="button" value="Ligar" id="btnLigar">
+    <input type="button" value="Desligar" id="btnDesligar">
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+        .dark {
+            color: white;
+            background-color: black;
+        }
+        table, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.onload = inicio;
+
+        function inicio() {
+            document.getElementById('btnGera').addEventListener('click', gera);
+            document.getElementById('btnMarca').addEventListener('click', marca);
+        }
+
+        function gera() {
+            let tabela = document.getElementsByTagName('table')[0];
+            let elementos = '<tr>';
+            
+            for (var i = 1; i <= 31; i++) {
+                if ((i - 1) % 7 == 0 && i !== 1) {
+                    elementos += '</tr><tr>';
+                }
+                elementos += `<td id="dia${i}">${i}</td>`;
+            }
+            elementos += '</tr>';
+            tabela.innerHTML = elementos;
+        }
+
+        function marca() {
+            let numero = document.getElementById('numero').value;
+            let diaSelecionado = document.getElementById(`dia${numero}`);
+
+            if (diaSelecionado) {
+                diaSelecionado.classList.add('dark');
+            } else {
+                alert("Dia inválido! Escolha um número entre 1 e 31.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <table></table>
+    <br>
+    <input type="button" value="Gerar mês" id="btnGera"><br><br>
+    <label for="numero">Dia:</label>
+    <input type="text" id="numero" value="1">
+    <input type="button" value="Marcar dia" id="btnMarca">
+</body>
+</html>
