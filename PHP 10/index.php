@@ -27,11 +27,12 @@ if (isset($_SESSION['user_id'])) {
     </style>
 </head>
 <body>
-    <h1>Sistema de Reclamações da Prefeitura</h1>
-    <p>Sua voz é importante para nós. Faça o login ou cadastre-se para começar.</p>
+    <h1>Sistema de Reclamações</h1>
+    <p>Sua satisfação como nosso cliente é importante para nós. Faça o login ou cadastre-se para começar.</p>
     <div>
         <a href="login.php">Entrar (Login)</a>
         <a href="cadastro.php">Cadastrar-se</a>
     </div>
 </body>
 </html>
+
