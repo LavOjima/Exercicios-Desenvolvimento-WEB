@@ -6,6 +6,8 @@
 -- Tempo de geração: 30-Out-2025 às 01:41
 -- Versão do servidor: 10.4.32-MariaDB
 -- versão do PHP: 8.2.12
+create database reclama
+use database reclama;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
